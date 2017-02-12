@@ -2,21 +2,21 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="com.github.carljmosca_zmjet_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>com.github.carljmosca.zmjet.entity.Devices</class>
-    <class>com.github.carljmosca.zmjet.entity.Filters</class>
-    <class>com.github.carljmosca.zmjet.entity.Zones</class>
-    <class>com.github.carljmosca.zmjet.entity.MonitorPresets</class>
-    <class>com.github.carljmosca.zmjet.entity.Users</class>
-    <class>com.github.carljmosca.zmjet.entity.ZonePresets</class>
-    <class>com.github.carljmosca.zmjet.entity.Monitors</class>
-    <class>com.github.carljmosca.zmjet.entity.TriggersX10</class>
-    <class>com.github.carljmosca.zmjet.entity.Groups</class>
-    <class>com.github.carljmosca.zmjet.entity.Config</class>
-    <class>com.github.carljmosca.zmjet.entity.States</class>
-    <class>com.github.carljmosca.zmjet.entity.Frames</class>
-    <class>com.github.carljmosca.zmjet.entity.ControlPresets</class>
-    <class>com.github.carljmosca.zmjet.entity.Controls</class>
-    <class>com.github.carljmosca.zmjet.entity.Events</class>
+    <class>com.carljmosca.zmjet.entity.Users</class>
+    <class>com.carljmosca.zmjet.entity.States</class>
+    <class>com.carljmosca.zmjet.entity.Controls</class>
+    <class>com.carljmosca.zmjet.entity.Devices</class>
+    <class>com.carljmosca.zmjet.entity.Filters</class>
+    <class>com.carljmosca.zmjet.entity.MonitorPresets</class>
+    <class>com.carljmosca.zmjet.entity.ZonePresets</class>
+    <class>com.carljmosca.zmjet.entity.Frames</class>
+    <class>com.carljmosca.zmjet.entity.TriggersX10</class>
+    <class>com.carljmosca.zmjet.entity.Groups</class>
+    <class>com.carljmosca.zmjet.entity.Events</class>
+    <class>com.carljmosca.zmjet.entity.Monitors</class>
+    <class>com.carljmosca.zmjet.entity.Config</class>
+    <class>com.carljmosca.zmjet.entity.ControlPresets</class>
+    <class>com.carljmosca.zmjet.entity.Zones</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/zm?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

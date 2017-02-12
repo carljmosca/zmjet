@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.carljmosca.zmjet.entity;
+package com.carljmosca.zmjet.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -15,21 +15,29 @@ import javax.persistence.Embeddable;
  * @author moscac
  */
 @Embeddable
-public class ControlPresetsPK implements Serializable {
+public class EventsPK implements Serializable {
 
+    @Basic(optional = false)
+    @Column(name = "Id")
+    private int id;
     @Basic(optional = false)
     @Column(name = "MonitorId")
     private int monitorId;
-    @Basic(optional = false)
-    @Column(name = "Preset")
-    private int preset;
 
-    public ControlPresetsPK() {
+    public EventsPK() {
     }
 
-    public ControlPresetsPK(int monitorId, int preset) {
+    public EventsPK(int id, int monitorId) {
+        this.id = id;
         this.monitorId = monitorId;
-        this.preset = preset;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getMonitorId() {
@@ -40,33 +48,25 @@ public class ControlPresetsPK implements Serializable {
         this.monitorId = monitorId;
     }
 
-    public int getPreset() {
-        return preset;
-    }
-
-    public void setPreset(int preset) {
-        this.preset = preset;
-    }
-
     @Override
     public int hashCode() {
         int hash = 0;
+        hash += (int) id;
         hash += (int) monitorId;
-        hash += (int) preset;
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ControlPresetsPK)) {
+        if (!(object instanceof EventsPK)) {
             return false;
         }
-        ControlPresetsPK other = (ControlPresetsPK) object;
+        EventsPK other = (EventsPK) object;
+        if (this.id != other.id) {
+            return false;
+        }
         if (this.monitorId != other.monitorId) {
-            return false;
-        }
-        if (this.preset != other.preset) {
             return false;
         }
         return true;
@@ -74,7 +74,7 @@ public class ControlPresetsPK implements Serializable {
 
     @Override
     public String toString() {
-        return "com.github.carljmosca.zmjet.entity.ControlPresetsPK[ monitorId=" + monitorId + ", preset=" + preset + " ]";
+        return "com.github.carljmosca.zmjet.entity.EventsPK[ id=" + id + ", monitorId=" + monitorId + " ]";
     }
     
 }
