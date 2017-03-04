@@ -7,23 +7,12 @@ package com.github.carljmosca.zmjet.repository;
 
 import com.github.carljmosca.zmjet.entity.Frames;
 import com.github.carljmosca.zmjet.entity.FramesPK;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author moscac
  */
-@RepositoryRestResource(collectionResourceRel = "frames", path = "frames")
-public interface FramesRepository extends PagingAndSortingRepository<Frames, FramesPK> {
+public interface FramesRepository extends JpaRepository<Frames, FramesPK> {
 
-    /**
-     *
-     * @param t
-     */
-    @Override
-    @RestResource(exported = false)
-    public void delete(Frames t);
 }
-

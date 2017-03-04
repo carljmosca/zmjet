@@ -5,14 +5,15 @@
  */
 package com.github.carljmosca.zmjet.repository;
 
-import com.github.carljmosca.zmjet.entity.Events;
-import com.github.carljmosca.zmjet.entity.EventsPK;
+import com.github.carljmosca.zmjet.entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author moscac
  */
-public interface EventsRepository extends JpaRepository<Events, EventsPK> {  
+public interface UsersRepository extends JpaRepository<Users, Integer> {
+    
+    public Users findByUsername(String username);
     
 }

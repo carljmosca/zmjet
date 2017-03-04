@@ -1,5 +1,13 @@
 target/
-nbactions.xml
+nbactions*.xml
 nb-configuration.xml
 *.gz
 *.tar
+/zmjet2/nbproject/private/
+/OracleJETApplication/nbproject/private/
+/zmjet/nbproject/private/
+/zmjet_old/bower_components/
+/zmjet_old/nbproject/private/
+*.yml
+*.yaml
+*.properties

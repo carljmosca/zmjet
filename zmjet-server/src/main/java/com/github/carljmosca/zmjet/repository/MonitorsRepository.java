@@ -5,26 +5,15 @@
  */
 package com.github.carljmosca.zmjet.repository;
 
-import com.github.carljmosca.zmjet.entity.Frames;
-import com.github.carljmosca.zmjet.entity.FramesPK;
 import com.github.carljmosca.zmjet.entity.Monitors;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author moscac
  */
-    
-@RepositoryRestResource(collectionResourceRel = "monitors", path = "monitors")
-public interface MonitorsRepository extends PagingAndSortingRepository<Monitors, Integer> {
 
-    /**
-     *
-     * @param t
-     */
-    @Override
-    @RestResource(exported = false)
-    public void delete(Monitors t);
+public interface MonitorsRepository extends JpaRepository<Monitors, Integer> {
+
+
 }
