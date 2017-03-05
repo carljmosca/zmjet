@@ -1,0 +1,22 @@
+<div class="oj-hybrid-padding">
+    <h3 data-bind="text: oj.Translations.getTranslatedString('Events')">Events</h3>
+    <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-sm-12 oj-flex-item oj-panel">
+            <table id="table" summary="Event List" aria-label="Events Table"
+                   data-bind="ojComponent: {component: 'ojTable', data: pagingDatasource, columnsDefault: {sortable: 'enabled'},
+                            columns: [
+                                      {headerText: oj.Translations.getTranslatedString('Name'),
+                                       field: 'name', style: 'width: 45%'},
+                                      {headerText: oj.Translations.getTranslatedString('Cause'),
+                                       field: 'cause', style: 'width: 25%'},
+                                       {headerText: oj.Translations.getTranslatedString('Date'),
+                                        field: 'startDate', style: 'width: 15%'},
+                                        {headerText: oj.Translations.getTranslatedString('Time'),
+                                         field: 'startTime', style: 'width: 15%'}
+                                     ],
+                            rootAttributes: {'style':'width: 100%;'}}">
+            </table>
+            <div id="paging" data-bind="ojComponent: {component: 'ojPagingControl', data: pagingDatasource, pageSize: 10}"></div>
+        </div>
+    </div>
+</div>

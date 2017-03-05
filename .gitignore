@@ -11,3 +11,6 @@ nb-configuration.xml
 *.yml
 *.yaml
 *.properties
+/admin/nbproject/private/
+/zmjet2/bower_components/
+/zmjet2/node_modules/
