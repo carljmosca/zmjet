@@ -1,18 +1,18 @@
 <div class="oj-hybrid-padding">
-    <h3 data-bind="text: oj.Translations.getTranslatedString('Monitors')">Monitors</h3>
+    <h3 data-bind="text: oj.Translations.getTranslatedString('Frames')">Frames</h3>
     <div class="oj-flex oj-flex-items-pad">
         <div class="oj-sm-12 oj-flex-item oj-panel">
-            <table id="table" summary="Monitor List" aria-label="Monitors Table"
+            <table id="table" summary="Frame List" aria-label="Frames Table"
                    data-bind="ojComponent: {component: 'ojTable', data: pagingDatasource, columnsDefault: {sortable: 'enabled'},
                             columns: [
-                                      {headerText: oj.Translations.getTranslatedString('Name'),
-                                       field: 'name', style: 'width: 45%'},
                                       {headerText: oj.Translations.getTranslatedString('Type'),
                                        field: 'type', style: 'width: 25%'},
-                                       {headerText: oj.Translations.getTranslatedString('Function'),
-                                        field: 'function', style: 'width: 25%'},
-                                       {headerText: oj.Translations.getTranslatedString('Enabled'),
-                                        field: 'enabled', style: 'width: 5%'}
+                                       {headerText: oj.Translations.getTranslatedString('Score'),
+                                        field: 'score'},
+                                        {headerText: oj.Translations.getTranslatedString('Date'),
+                                         field: 'tsDate', style: 'width: 25%'},
+                                         {headerText: oj.Translations.getTranslatedString('Time'),
+                                          field: 'tsTime'}
                                      ],
                             rootAttributes: {'style':'width: 100%;'}}">
             </table>

@@ -1,9 +1,9 @@
 {
-  "name": "oraclejet-app",
+  "name": "zmjet",
   "version": "1.0.0",
-  "description": "A sample Oracle JavaScript Extension Toolkit (JET) web app",
+  "description": "A mobile web client for Zone Minder created with Oracle Jet.",
   "author": {
-    "name": "Oracle Jet Team"
+    "name": "Carl J. Mosca"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

@@ -8,12 +8,14 @@ define(['ojs/ojcore', 'knockout', 'moment', 'springCollections', 'ojs/ojtable', 
                 self.datasource = ko.observable(); // datasource is an observable so when it is triggered/refreshed, the table component is triggered
 
                 function parseMonitor(response) {
+                    var ts = moment(response.timeStamp);
                     return {
-                        id: response.id,
-                        name: response.name,
+                        id: response.framesPK.frameId,
                         type: response.type,
-                        function: response.function,
-                        enabled: response.enabled === 1 ? 'True' : 'False'
+                        score: response.score,
+                        ts: oj.IntlConverterUtils.dateToLocalIso(ts.toDate()),
+                        tsDate: ts.format('MM/DD/YY'),
+                        tsTime: ts.format('hh:mm a')
                     };
                 }
                 ;
@@ -36,7 +38,7 @@ define(['ojs/ojcore', 'knockout', 'moment', 'springCollections', 'ojs/ojtable', 
                     parse: springCollections.extractContent,
                     fetchSize: 10,
                     model: new Monitor(),
-                    comparator: 'name',
+                    comparator: 'timeStamp',
                     sortDirection: -1
                 });
 
